@@ -8,21 +8,14 @@ h5, p, a, li{
     font-family:'kufam';
 }
 
-h5{
-    font-weight: lighter;
-    font-size: 1.1rem;
-}
-
-p{
-    font-size: 1rem;
-}
-
 body{
     max-width: 1440px;
     margin: auto;
 }
 
+
 /* /------HEADER------/ */
+
 
 #header {
     background-color:  #FAE5D1;
@@ -52,11 +45,13 @@ header nav a{
     padding: 8px 15px;
 }
 
+
 /* /------MAIN------/ */
+
 
 main{
     background-color:  #fffdfb ;
-    margin: 5rem;
+    margin: 7rem;
 }
 
 #section{
@@ -65,8 +60,8 @@ main{
 }
 
 .article{
-    width: 30%;
-    border: 5px dotted #AC7961 ;
+    width: 33%;
+    border: 3px dashed #AC7961 ;
     background-color: #FAE5D1;
     border-radius: 20px;
     padding: 1rem;
@@ -84,14 +79,20 @@ h5{
     margin-bottom: 1rem;
 }
 
+span{
+    font-size: 9px;
+}
 .article p{
     font-style: italic;
+    padding-left: 0.8rem;
 }
 
 .star{
     margin: 20px 0;
     color: #AC7961;
+    font-size: 1.7rem;
     margin-bottom: 1rem;
+    padding-left: 0.8rem;
 }
 
 .button{
@@ -100,14 +101,18 @@ h5{
     display: flex;
     align-items: baseline;
     justify-content: space-around;
-    padding: 10px 10px;
+    padding: 15px 10px 5px 10px;
     border-radius: 50px;
     border: 1px solid transparent;
     background-color:#1E1E1E;
     color: white;
 }
 
-.small{
+.button p, .fa-cart-plus{
+    font-size: 20px;
+}
+
+.button .small{
     font-size: 10px;
 }
 
@@ -116,11 +121,12 @@ h5{
 }
 
 main section:first-child{
-    margin-bottom: 5rem;
+    margin-bottom: 7rem;
 }
 
 
 /* /------FOOTER------/ */
+
 
 footer{
     background-color: #AC7961;
@@ -134,7 +140,7 @@ footer img{
     border-radius: 5px;
     position: absolute;
     top:-30px;
-    right: calc(50% + -30px) ;
+    right: calc(50% - 30px);
 }
 
 .d-flex{
@@ -150,7 +156,9 @@ footer img{
     text-decoration: underline;
     margin-bottom: 0.5rem;
 }
-
+.d-flex ul li a, .reseau_lien a{
+    color: white;
+}
 .reseau{
     text-align: center;
 }
@@ -168,18 +176,15 @@ footer img{
     list-style: none;
 }
 
-.reseau_lien a{
-    color: white;
-}
-
 .flex2{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
-/* /------MEDIA QUERY------/ */
 
+
+/* /------MEDIA QUERY------/ */
 
 
 @media only screen and (max-width: 1200px){
@@ -196,6 +201,10 @@ footer img{
 @media only screen and (max-width: 600px){
     body{
         min-width: 375px;
+    }
+
+    main{
+        margin: 5rem 1rem;
     }
 
     header nav li{
