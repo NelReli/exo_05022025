@@ -8,6 +8,15 @@ h5, p, a, li{
     font-family:'kufam';
 }
 
+h5{
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
 body{
     max-width: 1440px;
     margin: auto;
@@ -15,9 +24,9 @@ body{
 
 /* /------HEADER------/ */
 
-.header {
+#header {
     background-color:  #FAE5D1;
-    height: 60px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +49,7 @@ header nav a{
     background-color:#1E1E1E;
     color: #FAE5D1;
     border-radius: 0 0 8px 8px;
-    padding: 8px;
+    padding: 8px 15px;
 }
 
 /* /------MAIN------/ */
@@ -50,7 +59,7 @@ main{
     margin: 5rem;
 }
 
-.section{
+#section{
     display: flex;
     justify-content: space-around;
 }
@@ -61,6 +70,7 @@ main{
     background-color: #FAE5D1;
     border-radius: 20px;
     padding: 1rem;
+    box-shadow: 0px 3px 5px #ac7961a9;
 }
 
 .article img{
@@ -115,7 +125,7 @@ main section:first-child{
 footer{
     background-color: #AC7961;
     color: white;
-    padding: 5rem;
+    padding: 5rem 5rem 1rem 3rem;
     position: relative;
 }
 
@@ -124,7 +134,7 @@ footer img{
     border-radius: 5px;
     position: absolute;
     top:-30px;
-    right: 50%;
+    right: calc(50% + -30px) ;
 }
 
 .d-flex{
@@ -165,6 +175,7 @@ footer img{
 .flex2{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 /* /------MEDIA QUERY------/ */
@@ -182,7 +193,11 @@ footer img{
 }
 
 
-@media only screen and (max-width: 720px){
+@media only screen and (max-width: 600px){
+    body{
+        min-width: 375px;
+    }
+
     header nav li{
         width: 100%;
         text-align: center;
@@ -200,7 +215,7 @@ footer img{
         display: block;
     }
 
-    .section{
+    #section{
         flex-direction: column;
         align-items: center;
     }
@@ -220,8 +235,17 @@ footer img{
         gap: 2rem;
     }
 
+    .order_5{
+        order: 3;
+    }
+
+
     .flex2{
         gap: 6rem;
+    }
+
+    footer{
+        padding: 5rem 0;
     }
 }
 
